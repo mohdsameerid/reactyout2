@@ -20,6 +20,8 @@ import React from "react";
 //   )
 // }
 
+
+
 // 2
 /**
   Challenge: Display all users to the browser
@@ -45,6 +47,9 @@ import React from "react";
 //     </>
 //   );
 // }
+
+
+
 
 // 3
 /**
@@ -72,6 +77,8 @@ import React from "react";
 
 
 
+
+
 // 4
 /** 
   Challenge: User should be able to type in any characters on input and those character should show in the browser.
@@ -91,6 +98,9 @@ import React from "react";
 //     </>
 //   );
 // }
+
+
+
 
 // 5
 /**
@@ -118,7 +128,7 @@ import React from "react";
 
 
 
-
+//6
 /** 
   Challenge: Parent text (I need to be updated from my child) should be updated when Child button below is clicked. Feel free to use any string to update the parent's current string.
   
@@ -161,7 +171,7 @@ function Parent() {
 
 
 
-
+// 7
 /**
   Challenge: Show entire Child component content inside Parent component. Only add code on Parent Component below
   
@@ -215,7 +225,7 @@ function Parent() {
 
 
 
-
+// 8
 /** 
   Challenge: Make this app work like a calculator that can add two numbers.
   
@@ -256,7 +266,7 @@ function Parent() {
 
 
 
-
+//9
 /**
   Challenge: Pressing `Increment` button should increase the counter count by one. Pressing `Decrement` button should decrease the counter count by one.
   
@@ -290,7 +300,7 @@ function Parent() {
 
 
 
-
+// 10
 const url = "https://jsonplaceholder.typicode.com/users/1";
 /** 
   // Sample Response
@@ -336,6 +346,7 @@ const url = "https://jsonplaceholder.typicode.com/users/1";
 //     </div>
 //   );
 // }
+
 
 
 
