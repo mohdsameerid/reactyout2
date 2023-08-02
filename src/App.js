@@ -306,8 +306,8 @@ const url = "https://jsonplaceholder.typicode.com/users/1";
 //   );
 // }
 
-// function App() {
-//   return <>Hello</>;
-// }
+function App() {
+  return <>Hello</>;
+}
 
 export default App;
