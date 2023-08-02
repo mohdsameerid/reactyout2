@@ -13,14 +13,8 @@ import React from "react";
   Video for reference: https://youtu.be/VzNNjNmbXpY
 **/
 // function App() {
-//   return(
-//      <div>
-//     JSX is cool!
-//     </div>
-//   )
+//   return <div>JSX is cool!</div>;
 // }
-
-
 
 // 2
 /**
@@ -48,9 +42,6 @@ import React from "react";
 //   );
 // }
 
-
-
-
 // 3
 /**
   Challenge: Make the button functional
@@ -68,16 +59,12 @@ import React from "react";
 
 //   return (
 //     <>
-//       <button onClick={handleButton}>{ button ? <div>Hide</div> : <div>Show</div>} Element Below</button>
+//       <button onClick={handleButton}>{ button ? "Hide" : "Show"} Element Below</button>
 
 //       {button ? <div>Toggle Challenge</div> : <div></div>}
 //     </>
 //   );
 // }
-
-
-
-
 
 // 4
 /** 
@@ -99,9 +86,6 @@ import React from "react";
 //   );
 // }
 
-
-
-
 // 5
 /**
   Challenge: Make button disabled when there is no character on the input field. Enable the `Submit` button (remove button from being disabled) when there is at least one character.
@@ -110,23 +94,16 @@ import React from "react";
   Video for reference: https://youtu.be/VzNNjNmbXpY
 **/
 // function App() {
-//   const [val , setVal] = React.useState("");
+//   const [val, setVal] = React.useState("");
 
 //   return (
 //     <>
 //       <h3>Disable Button Challenge</h3>
-//       <input type="text" value={val} onChange={ (event) => {
-//         setVal(event.target.value);
-//       }} />
-//       <button disabled={val.length < 1}>Submit</button>
+//       <input type="text" value={val} onChange={(e) => setVal(e.target.value)}  />
+//       <button disabled={val.length < 1} >Submit</button>
 //     </>
 //   );
 // }
-
-
-
-
-
 
 //6
 /** 
@@ -135,41 +112,34 @@ import React from "react";
   Solution: https://codepen.io/angelo_jin/pen/KKXoKgO
   Video for reference: https://youtu.be/VzNNjNmbXpY
 **/
-function Child({setValue}) {
-  return (
-    <>
-      <div>Child</div>
-      <button onClick={() =>  setValue("Data Changed") }>Change Parent Value</button>
-    </>
-  );
-}
+// function Child({setValue}) {
+//   return (
+//     <>
+//       <div>Child</div>
+//       <button onClick={() => { setValue("I'm Changed!!!!!!!")}}>Change Parent Value</button>
+//     </>
+//   );
+// }
 
-function Parent() {
-  const [value, setValue] = React.useState(
-    "I need to be updated from my child"
-  );
+// function App() {
+//   const [value, setValue] = React.useState(
+//     "I need to be updated from my child"
+//   );
 
-  return (
-    <>
-      <h3>Update Parent State Challenge (Using Callback)</h3>
-      <div className="wrapper">
-        <div>Parent</div>
-        <div className="box-wrapper">{value}</div>
-      </div>
+//   return (
+//     <>
+//       <h3>Update Parent State Challenge (Using Callback)</h3>
+//       <div className="wrapper">
+//         <div>Parent</div>
+//         <div className="box-wrapper">{value}</div>
+//       </div>
 
-      <div className="wrapper">
-        <Child setValue={setValue}/>
-      </div>
-    </>
-  );
-}
-
-
-
-
-
-
-
+//       <div className="wrapper">
+//         <Child setValue={setValue} />
+//       </div>
+//     </>
+//   );
+// }
 
 // 7
 /**
@@ -221,10 +191,6 @@ function Parent() {
 //   );
 // }
 
-
-
-
-
 // 8
 /** 
   Challenge: Make this app work like a calculator that can add two numbers.
@@ -263,9 +229,6 @@ function Parent() {
 //   );
 // }
 
-
-
-
 //9
 /**
   Challenge: Pressing `Increment` button should increase the counter count by one. Pressing `Decrement` button should decrease the counter count by one.
@@ -295,10 +258,6 @@ function Parent() {
 //     </>
 //   );
 // }
-
-
-
-
 
 // 10
 const url = "https://jsonplaceholder.typicode.com/users/1";
@@ -347,13 +306,8 @@ const url = "https://jsonplaceholder.typicode.com/users/1";
 //   );
 // }
 
-
-
-
-function App(){
-  return(
-    <>Hello</>
-  );
-}
+// function App() {
+//   return <>Hello</>;
+// }
 
 export default App;
