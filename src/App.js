@@ -5,7 +5,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 
-// 1
+// 1 // Display simple JSX
 /** 
   Challenge: Display `JSX is cool!` as an output
   
@@ -16,7 +16,7 @@ import React from "react";
 //   return <div>JSX is cool!</div>;
 // }
 
-// 2
+// 2 // Display array of users to browser
 /**
   Challenge: Display all users to the browser
   Small Hint: Use array map with react key
@@ -42,7 +42,7 @@ import React from "react";
 //   );
 // }
 
-// 3
+// 3 // Show/Hide Element on Screen
 /**
   Challenge: Make the button functional
   A click on button should toggle (show/hide) the string `Toggle Challenge` each time it is pressed
@@ -66,7 +66,7 @@ import React from "react";
 //   );
 // }
 
-// 4
+// 4 // 2 way data binding in ReactJS
 /** 
   Challenge: User should be able to type in any characters on input and those character should show in the browser.
   
@@ -86,7 +86,7 @@ import React from "react";
 //   );
 // }
 
-// 5
+// 5 // Disable a button
 /**
   Challenge: Make button disabled when there is no character on the input field. Enable the `Submit` button (remove button from being disabled) when there is at least one character.
   
@@ -105,7 +105,7 @@ import React from "react";
 //   );
 // }
 
-//6
+//6 // Update the parent state
 /** 
   Challenge: Parent text (I need to be updated from my child) should be updated when Child button below is clicked. Feel free to use any string to update the parent's current string.
   
@@ -141,7 +141,7 @@ import React from "react";
 //   );
 // }
 
-// 7
+// 7  // Dynamically add child components (React Children)
 /**
   Challenge: Show entire Child component content inside Parent component. Only add code on Parent Component below
   
@@ -191,7 +191,7 @@ import React from "react";
 //   );
 // }
 
-// 8
+// 8 // Sum of Two Numbers
 /** 
   Challenge: Make this app work like a calculator that can add two numbers.
   
@@ -229,7 +229,7 @@ import React from "react";
 //   );
 // }
 
-//9
+//9 // Create Counter App 🕒
 /**
   Challenge: Pressing `Increment` button should increase the counter count by one. Pressing `Decrement` button should decrease the counter count by one.
   
@@ -259,7 +259,7 @@ import React from "react";
 //   );
 // }
 
-// 10
+// 10  // Fetch data from an API
 const url = "https://jsonplaceholder.typicode.com/users/1";
 /** 
   // Sample Response
