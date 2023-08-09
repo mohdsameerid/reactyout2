@@ -154,7 +154,7 @@ import React from "react";
 //   return <div>This is children content</div>;
 // }
 // // Add code only here
-// function Parent() {
+// function Parent({}) {
 //   return (
 //     <div>
 //       <h3>Parent Component</h3>
@@ -306,8 +306,86 @@ const url = "https://jsonplaceholder.typicode.com/users/1";
 //   );
 // }
 
+// 11.  Making a dynamic drop-down, if you select country is india then
+// accordingly states are like Mumbai and delhi.
+
+const countries = [
+  { name: "India", value: "IN", cities: ["Delhi", "Mumbai"] },
+  { name: "Pak", value: "PK", cities: ["Lahore", "Karachi"] },
+  { name: "Bangladesh", value: "BG", cities: ["Dhaka", "Chittagong"] },
+];
+
 function App() {
-  return <>Hello</>;
+  // it will get you the country.
+  const [states, setStates] = useState([]);
+
+  return (
+    <div className="App">
+      {/* 1st DropDown */}
+      <select
+        onChange={(e) => {
+          setStates(e.target.value);
+          console.log(e.target.value);
+        }}
+      >
+        {countries.map((items, idx) => {
+          return <option value={idx}> {items.name}</option>;
+        })}
+      </select>
+
+      {/* 2nd DropDown */}
+      <select>
+        {countries[states].cities.map((items) => {
+          return <option>{items}</option>;
+        })}
+      </select>
+    </div>
+  );
 }
+
+// 
+
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       count: 0,
+//     };
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <h1>count : {this.state.count}</h1>
+//         <button
+//           onClick={() =>
+//             this.setState({
+//               count: this.state.count + 1,
+//             })
+//           }
+//         >
+//           Click me!
+//         </button>
+//         <button
+//           onClick={() => {
+//             this.setState({
+//               count: this.state.count - 1,
+//             });
+//           }}
+//         >
+//           Click me
+//         </button>
+//         <button
+//           onClick={() => {
+//             this.setState({
+//               count: 0,
+//             });
+//           }}
+//         >
+//           ClicK me
+//         </button>
+//       </div>
+//     );
+//   }
+// }
 
 export default App;
