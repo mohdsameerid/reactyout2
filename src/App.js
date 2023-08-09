@@ -306,45 +306,47 @@ const url = "https://jsonplaceholder.typicode.com/users/1";
 //   );
 // }
 
-// 11.  Making a dynamic drop-down, if you select country is india then
-// accordingly states are like Mumbai and delhi.
+/** 
+ * 11.  Making a dynamic drop-down, if you select country is india then
+        accordingly states are like Mumbai and delhi.
+*/
+// const countries = [
+//   { name: "India", value: "IN", cities: ["Delhi", "Mumbai"] },
+//   { name: "Pak", value: "PK", cities: ["Lahore", "Karachi"] },
+//   { name: "Bangladesh", value: "BG", cities: ["Dhaka", "Chittagong"] },
+// ];
 
-const countries = [
-  { name: "India", value: "IN", cities: ["Delhi", "Mumbai"] },
-  { name: "Pak", value: "PK", cities: ["Lahore", "Karachi"] },
-  { name: "Bangladesh", value: "BG", cities: ["Dhaka", "Chittagong"] },
-];
+// function App() {
+//   // it will get you the country.
+//   const [states, setStates] = useState([]);
 
-function App() {
-  // it will get you the country.
-  const [states, setStates] = useState([]);
+//   return (
+//     <div className="App">
+//       {/* 1st DropDown */}
+//       <select
+//         onChange={(e) => {
+//           setStates(e.target.value);
+//           console.log(e.target.value);
+//         }}
+//       >
+//         {countries.map((items, idx) => {
+//           return <option value={idx}> {items.name}</option>;
+//         })}
+//       </select>
 
-  return (
-    <div className="App">
-      {/* 1st DropDown */}
-      <select
-        onChange={(e) => {
-          setStates(e.target.value);
-          console.log(e.target.value);
-        }}
-      >
-        {countries.map((items, idx) => {
-          return <option value={idx}> {items.name}</option>;
-        })}
-      </select>
+//       {/* 2nd DropDown */}
+//       <select>
+//         {countries[states].cities.map((items) => {
+//           return <option>{items}</option>;
+//         })}
+//       </select>
+//     </div>
+//   );
+// }
 
-      {/* 2nd DropDown */}
-      <select>
-        {countries[states].cities.map((items) => {
-          return <option>{items}</option>;
-        })}
-      </select>
-    </div>
-  );
-}
-
-// 
-
+ /**
+  * 12. Counter with Class based components 
+  */
 // class App extends React.Component {
 //   constructor(props) {
 //     super(props);
