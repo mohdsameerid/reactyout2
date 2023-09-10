@@ -4,6 +4,7 @@
 // import "./Components/Movie.css";
 import { useEffect, useState } from "react";
 import React from "react";
+import ShimmerUI from "./Components/ShimmerUI";
 
 // 1 // Display simple JSX
 /** 
@@ -344,9 +345,9 @@ const url = "https://jsonplaceholder.typicode.com/users/1";
 //   );
 // }
 
- /**
-  * 12. Counter with Class based components 
-  */
+/**
+ * 12. Counter with Class based components
+ */
 // class App extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -390,4 +391,154 @@ const url = "https://jsonplaceholder.typicode.com/users/1";
 //   }
 // }
 
+/**
+  * Creating a list of items, and apply delete functionality to it, and 
+    also Checkbox functionality if checkbox is clicked then it displayed the delete button, 
+    othewise it should be disabled.
+  */
+// const usersdatas = ["first items", "second items", "third items"];
+
+// function App() {
+//   const [data, setData] = useState();
+//   const [usersdata, setUserData] = useState(usersdatas);
+//   const [checkBoxData, setCheckBoxData] = useState(false);
+
+//   return (
+//     <ul>
+//       {usersdata.map((item, idx) => {
+//         return (
+//           <>
+//             <li key={idx}>
+//               <input
+//                 type="checkBox"
+//                 value={idx}
+//                 onClick={(e) => {
+//                   setCheckBoxData(true);
+//                   console.log(e.target.value);
+//                 }}
+
+//               ></input>
+//               {item + " " + idx}
+//               <button
+//                 value={idx}
+//                 onClick={(e) => {
+//                   setData(e.target.value);
+//                   // console.log(e.target.value);
+
+//                   let newArr = usersdata;
+
+//                   newArr.splice(data, 1);
+//                   console.log(newArr);
+//                   setUserData(newArr);
+//                 }}
+//                 key={idx}
+//               >
+//                 delete item
+//               </button>{" "}
+//             </li>
+//           </>
+//         );
+//       })}
+//     </ul>
+//   );
+// }
+
+// export default App;
+
+// access code - ERXLCVH7TFMHWMVV
+// password - D7E43DH4
+
+// import "./styles.css";
+// import { useEffect, useState } from "react";
+// const countries = [
+//   { name: "India", value: "IN", cities: ["Delhi", "Mumbai"] },
+//   { name: "Pak", value: "PK", cities: ["Lahore", "Karachi"] },
+//   { name: "Bangladesh", value: "BG", cities: ["Dhaka", "Chittagong"] }
+// ];
+
+function App() {
+  // const [isShown, setIsShown] = useState(false);
+  // function handleChange(e) {
+  //   e.target.style.background = "red";
+  // }
+
+  // return (
+  //   <div className="App">
+  //     <button
+  //       onMouseEnter={() => setIsShown(true)}
+  //       onMouseLeave={() => setIsShown(false)}
+  //     >
+  //       Hover over me
+  //     </button>
+
+  //     {isShown && <div>Hello</div>}
+
+  //     <button onMouseOver={handleChange} >
+  //       Hover over me for Color change
+  //     </button>
+  //   </div>
+  // );
+
+  const [userData, setUserData] = useState({});
+
+  //   aysnc function ApiCall(url){
+  //     const data = await fetch(url);
+  //     console.log(data);
+  //     const res = await data.json();
+  //     console.log(res);
+
+  //     setUserData(res);
+  //   }
+  //   React.useEffect(() => {
+  //     ApiCall(url);
+  //     console.log("1");
+  //   }, []);
+  const url = "https://jsonplaceholder.typicode.com/users/1";
+
+  async function ApiCall() {
+    const data = await fetch(url);
+    // console.log(data);
+    const res = await data.json();
+    console.log(res);
+
+    setUserData(res);
+  }
+
+  useEffect(() => {
+    ApiCall();
+  }, []);
+
+  // No need to touch code below
+  return (
+    <>
+      {userData.length === 0 ? (
+        <div>Data is Loading..........</div>
+      ) : (
+        <div className="App">
+          <h2>User Data</h2>
+          <p>
+            <strong>Name: </strong>{" "}
+            {userData.name || "(Need to populate name here)"}
+          </p>
+          <p>
+            <strong>Website: </strong>
+            {userData.website || "(Need to populate website here)"}
+          </p>
+          <p>
+            <strong>Email: </strong>
+            {userData.email || "(Need to populate email here)"}
+          </p>
+          <p>
+            <strong>Phone: </strong>
+            {userData.phone || "(Need to populate phone here)"}
+          </p>
+          <p>
+            <strong>Address: </strong>
+            {userData?.address?.street || "(Need to populate phone here)"}
+          </p>
+        </div>
+      )}
+    </>
+  );
+}
 export default App;
